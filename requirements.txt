@@ -1,7 +1,6 @@
 vowpalwabbit
 numpy
 pandas
-snowflake-connector-python==3.0.3
 snowflake-snowpark-python
 snowflake
 streamlit
