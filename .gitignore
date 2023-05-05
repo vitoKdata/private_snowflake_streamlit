@@ -1,2 +1,2 @@
-*.py
+model.py
 *.snowflake_bandit
