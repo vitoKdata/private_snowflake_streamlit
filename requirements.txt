@@ -2,6 +2,7 @@ vowpalwabbit
 numpy
 pandas
 snowflake-connector-python
+snowflake-snowpark-python
 snowflake
 streamlit
 uuid

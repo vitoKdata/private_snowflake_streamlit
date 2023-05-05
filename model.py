@@ -1,7 +1,10 @@
 import pandas as pd
 import numpy as np
 import uuid
-import snowflake.connector
+# Import Snowpark functions
+from snowflake.snowpark.session import Session
+from snowflake.snowpark.functions import col, lag
+from snowflake.snowpark.window import Window
 import streamlit as st
 
 
@@ -55,19 +58,13 @@ password = st.secrets.snowflake["password"]
 database = st.secrets.snowflake["database"] 
 
 
-
-
 def create_snowflake_connection():
-    conn = snowflake.connector.connect(
-        account=account,
-        password=password,
-        user=username,
-        warehouse="compute_wh",
-        database=database,
-        schema="DATA"
-    )
-
+    """Create Snowpark session object"""
+    connection_parameters = st.secrets["snowflake"]
+    conn = Session.builder.configs(connection_parameters).create()
     return conn
+
+
 
 
 
