@@ -1,11 +1,4 @@
-_libgcc_mutex	==	0.1
-_low_priority	==	1
-_mutex_mxnet	==	0.0.50
-_openmp_mutex	==	5.1
-_py-xgboost-mutex	==	2
-_pytorch_select	==	0.1
-_sysroot_linux-64_curr_repodata_hack	==	3
-_tflow_select	==	02.03.2000
+
 abseil-cpp	==	20211102
 absl-py	==	01.03.2000
 access	==	01.01.2003
