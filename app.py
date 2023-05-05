@@ -1,12 +1,9 @@
 import streamlit as st
-import time
 import numpy as np
-from PIL import Image
 from model import *
 import vowpalwabbit as pyvw
 import streamlit as st
 
-import base64
 
 
 # Display the image with a width of 300 pixels

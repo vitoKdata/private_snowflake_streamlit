@@ -1,8 +1,8 @@
-vowpalwabbit==9.8.0
-numpy==1.23.5
-pandas==2.0.1
-snowflake-connector-python==2.7.12
-snowflake==0.0.3
-streamlit==1.22.0
-
-
+vowpalwabbit
+numpy
+pandas
+snowflake-connector-python
+snowflake
+streamlit
+model
+uuid

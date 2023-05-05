@@ -2,8 +2,6 @@ import pandas as pd
 import numpy as np
 import uuid
 import snowflake.connector
-from snowflake.snowpark import Session
-
 import streamlit as st
 
 
