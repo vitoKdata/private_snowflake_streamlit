@@ -1,7 +1,4 @@
-vowpalwabbit
 numpy
-pandas
-snowflake-snowpark-python
-snowflake
+vowpalwabbit
 streamlit
-uuid
+
