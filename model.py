@@ -50,15 +50,8 @@ def vowpal_wabit_context_string(user_feature_dict):
     return [f"{' '.join(feature_list)}"]
 
 
-import snowflake.connector
 
-
-
-
-
-
-
-account = st.secrets.snowflake["snowflake_account"] 
+account = st.secrets.snowflake["account"] 
 username = st.secrets.snowflake["user"] 
 password = st.secrets.snowflake["password"] 
 database = st.secrets.snowflake["database"] 
