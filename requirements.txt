@@ -5,3 +5,4 @@ snowflake-connector-python
 snowflake
 streamlit
 uuid
+snowflake.connector
