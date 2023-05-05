@@ -53,8 +53,31 @@ def vowpal_wabit_context_string(user_feature_dict):
 import snowflake.connector
 
 
+
+
+
+
+
+account = st.secrets.snowflake["snowflake_account"] 
+username = st.secrets.snowflake["user"] 
+password = st.secrets.snowflake["password"] 
+database = st.secrets.snowflake["database"] 
+
+
+
+
 def create_snowflake_connection():
-    return Session.builder.configs(st.secrets.snowflake).create()
+    conn = snowflake.connector.connect(
+        account=account,
+        password=password,
+        user=username,
+        warehouse="compute_wh",
+        database=database,
+        schema="DATA"
+    )
+
+    return conn
+
 
 
 
