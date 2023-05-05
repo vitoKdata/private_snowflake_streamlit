@@ -148,9 +148,9 @@ with side_bar.form('myform'):
 		df['MEXICAN'] = np.where(df['Food'] == 'MEXICAN', 1, 0)
 		df['INTERNATIONAL'] = np.where(df['Food'] == 'INTERNATIONAL', 1, 0)
 		df = df.replace({'Yes': 1, 'No': 0})
-		df['CorrelationId'] = [uuid.uuid4() for _ in range(len(df))]
+		df['generatedID'] = [uuid.uuid4() for _ in range(len(df))]
 		preddd = pyvw.Workspace(f"--cb 112 -i cb.snowflake_bandit")
-		a= formatting_and_predicting_bandit_input_data(df, preddd)
+		a= recommending_cb(df, preddd)
 		connection_parameters = {
    "account": "ihidwgg-anb43019",
    "user": "AJKSLD",

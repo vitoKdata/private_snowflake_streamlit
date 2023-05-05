@@ -1,2 +1,2 @@
-model.py
+*.toml
 *.snowflake_bandit
