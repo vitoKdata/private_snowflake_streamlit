@@ -5,10 +5,7 @@ from PIL import Image
 from model import *
 import vowpalwabbit as pyvw
 import streamlit as st
-from snowflake.connector import connect
-from snowflake.snowpark.session import Session
-from snowflake.snowpark.types import IntegerType, FloatType
-from snowflake.snowpark.functions import avg, sum, col, udf, call_udf, call_builtin, year
+
 import base64
 
 
@@ -151,16 +148,8 @@ with side_bar.form('myform'):
 		df['generatedID'] = [uuid.uuid4() for _ in range(len(df))]
 		preddd = pyvw.Workspace(f"--cb 112 -i cb.snowflake_bandit")
 		a= recommending_cb(df, preddd)
-		connection_parameters = {
-   "account": "ihidwgg-anb43019",
-   "user": "AJKSLD",
-   "password": "Roberto_Vitor_2023!",
-   "warehouse": "compute_wh",
-   "role": "accountadmin",
-   "database": "BANDIT",
-   "schema": "DATA"
-}
-		session = Session.builder.configs(connection_parameters).create()
+		
+		session = create_snowflake_connection()
 		snow_df_pce = (session.table("BANDIT.DATA.RATINGS")) 
 		snow_df_pce.show()
 		data = snow_df_pce.to_pandas()
